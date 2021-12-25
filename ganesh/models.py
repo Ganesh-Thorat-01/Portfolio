@@ -72,3 +72,5 @@ class Project(models.Model):
 class Resume(models.Model):
     link=models.URLField(max_length=200)
     updated = models.DateTimeField(auto_now=True)
+    def __str__(self):
+        return f'Resume {self.id}'
