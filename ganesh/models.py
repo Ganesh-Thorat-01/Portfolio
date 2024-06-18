@@ -68,6 +68,16 @@ class Project(models.Model):
     def __str__(self):
         return f'Project {self.id}'
 
+#Certification SECTION
+
+class Certification(models.Model):
+    title = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='certification/')
+    link = models.URLField(max_length=200)
+
+    def __str__(self):
+        return f'Certification {self.id}'
+
 #Resume
 class Resume(models.Model):
     link=models.URLField(max_length=200)

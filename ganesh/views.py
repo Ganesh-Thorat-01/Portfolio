@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Home, About, Profile, Category, Skills, Project,Resume
+from .models import Home, About, Profile, Category, Skills, Project,Resume, Certification
 
 def index(request):
 
@@ -19,6 +19,8 @@ def index(request):
     # Project
     projects = Project.objects.all()
     
+    # Certification
+    certification = Certification.objects.all()
 
     context = {
         'home': home,
@@ -26,7 +28,8 @@ def index(request):
         'about': about,
         'profiles': profiles,
         'categories': categories,
-        'projects': projects
+        'projects': projects,
+        'certification':certification
     }
 
 

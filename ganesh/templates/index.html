@@ -147,6 +147,29 @@
                 </div>
                 
             </section>
+            <!--===== Certification =====-->
+            <section class="project section" id="project">
+                <h2 class="section-title">Certifications</h2>
+
+                <div class="project__container bd-grid">
+
+                    {% for certificate in certification %}
+                    <div>
+                    <h3>{{ certificate.title }}</h3>
+                    <div class="project__img">
+                        
+                        <img src="{{ certificate.image.url }}" alt="">
+
+                        <div class="project__link">
+                            <a href="{{ certificate.link }}" target="_blank" class="project__link-name">View details</a>
+                        </div>
+                    </div>
+                    </div>
+                    {% endfor %}
+                    
+                </div>
+                
+            </section>
 
             <!--===== CONTACT =====-->
             <section class="contact section" id="contact">

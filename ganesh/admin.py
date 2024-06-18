@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Home, About, Profile, Category, Skills, Project,Resume
+from .models import Home, About, Profile, Category, Skills, Project,Resume, Certification
 
 
 # Home
@@ -31,6 +31,9 @@ class CategoryAdmin(admin.ModelAdmin):
 
 # Project
 admin.site.register(Project)
+
+# Certification
+admin.site.register(Certification)
 
 #Resume
 admin.site.register(Resume)
