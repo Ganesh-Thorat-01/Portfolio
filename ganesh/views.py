@@ -20,7 +20,7 @@ def index(request):
     projects = Project.objects.all()
     
     # Certification
-    certification = Certification.objects.all()
+    certification = Certification.objects.order_by('sort_order')
 
     context = {
         'home': home,

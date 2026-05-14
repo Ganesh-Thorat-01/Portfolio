@@ -1,5 +1,6 @@
 from django.db import models
 from ckeditor.fields import RichTextField
+from orderable.models import Orderable
 
 # HOME SECTION
 
@@ -70,7 +71,7 @@ class Project(models.Model):
 
 #Certification SECTION
 
-class Certification(models.Model):
+class Certification(Orderable):
     title = models.CharField(max_length=200)
     image = models.ImageField(upload_to='certification/')
     link = models.URLField(max_length=200)

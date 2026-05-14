@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Home, About, Profile, Category, Skills, Project,Resume, Certification
+from .models import Home, About, Profile, Category, Skills, Project, Resume, Certification
 
 
 # Home
@@ -32,8 +32,13 @@ class CategoryAdmin(admin.ModelAdmin):
 # Project
 admin.site.register(Project)
 
-# Certification
-admin.site.register(Certification)
+# Certification with ordering
+@admin.register(Certification)
+class CertificationAdmin(admin.ModelAdmin):
+    list_display = ['sort_order', 'title']
+    list_editable = ['sort_order']
+    list_display_links = ['title']
+    ordering = ['sort_order']
 
 #Resume
 admin.site.register(Resume)
