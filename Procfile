@@ -1,2 +1,1 @@
-# Modify this Procfile to fit your needs
-web: gunicorn portfolio.wsgi
+web: gunicorn portfolio.wsgi:application --bind 0.0.0.0:$PORT
